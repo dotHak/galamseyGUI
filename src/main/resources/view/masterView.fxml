@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitoring.gui.controller.MainController">
+   <children>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane fx:id="splitPane" dividerPositions="0.85" layoutX="247.0" layoutY="100.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitPane dividerPositions="0.3" layoutX="14.0" layoutY="47.0" prefHeight="310.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <SplitPane dividerPositions="0.9" layoutX="14.0" layoutY="78.0" orientation="VERTICAL" prefHeight="308.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <TitledPane animated="false" layoutX="-14.0" prefHeight="271.0" prefWidth="173.0" text="Observatories" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXListView fx:id="observatoryListView" onMouseClicked ="#handleListView" prefHeight="244.0" prefWidth="171.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <JFXButton onAction="#showObservatoryForm" alignment="CENTER" buttonType="RAISED" style="-fx-background-color: #0d47a1;" text="New" textAlignment="CENTER" textFill="WHITE" />
+                                          <JFXButton onAction="#deleteObservatory" fx:id="deleteObservatorybtn" alignment="CENTER" buttonType="RAISED" layoutX="112.0" layoutY="1.0" style="-fx-background-color: #f44336;" text="Delete" textAlignment="CENTER" textFill="WHITE" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <SplitPane dividerPositions="0.45" layoutX="45.0" layoutY="40.0" prefHeight="308.0" prefWidth="413.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <SplitPane dividerPositions="0.9" layoutX="11.0" layoutY="79.0" orientation="VERTICAL" prefHeight="306.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TitledPane animated="false" layoutX="-23.0" layoutY="32.0" prefHeight="270.0" prefWidth="179.0" text="Galamseys" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <JFXListView fx:id="galamseyJFXListView" layoutX="-30.0" layoutY="-109.0" onMouseClicked="#handleGalamseyListView" prefHeight="243.0" prefWidth="177.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </TitledPane>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <JFXButton onAction = "#showGalamseyForm" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" style="-fx-background-color: #0d47a1;" text="New" textAlignment="CENTER" textFill="WHITE" />
+                                                      <JFXButton  fx:id="deleteGalamseybtn" onAction="#deleteGalamsey" alignment="CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="118.0" style="-fx-background-color: #f44336;" text="Delete" textAlignment="CENTER" textFill="WHITE" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <TitledPane animated="false" layoutX="-11.0" layoutY="14.0" prefHeight="306.0" prefWidth="222.0" text="Details" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TabPane layoutX="-8.0" prefHeight="279.0" prefWidth="220.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <tabs>
+                                                          <Tab text="Observatory">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Text layoutX="7.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="46.99999988079071" />
+                                                                        <Text fx:id="idText" layoutX="100.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.99999938160181" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutX="9.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+                                                                        <Text fx:id="nameText" layoutX="74.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="113.72949981689453" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutX="7.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" wrappingWidth="60.99999938160181" />
+                                                                        <Text fx:id="countryText" layoutX="87.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="102.7294921875" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutX="8.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year Started:" wrappingWidth="105.7294921875" />
+                                                                        <Text fx:id="yearText" layoutX="100.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.7294921875" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutX="8.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created At:" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="createdText" layoutX="103.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="107.7294921875" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutX="10.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Updated:" wrappingWidth="71.7294921875" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="updatedText" layoutX="101.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="104.72949981689453" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutX="6.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area Covered:" wrappingWidth="95.00000441074371" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="areaCovered" layoutX="112.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="88.72949981689453" AnchorPane.leftAnchor="110.0" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </Tab>
+                                                          <Tab text="Galamsey">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" wrappingWidth="34.7294921875" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="galamseyId" layoutX="106.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="79.7294921875" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vegetation Colour:" wrappingWidth="106.79882049560547" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="colourText" layoutX="155.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="44.00000162422657" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="16.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colour Value:" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="colourValueText" layoutX="131.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.7294921875" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="4.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latitude:" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="latText" layoutX="110.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.00000882148743" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="17.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longitude:" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="longText" layoutX="122.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="70.7294921875" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="22.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year:" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="yearStartedText" layoutX="96.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="70.72949981689453" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="8.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Observatory ID" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="obbID" layoutX="109.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="71.0" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="7.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created At:" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="createText" layoutX="82.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="125.7294921875" AnchorPane.leftAnchor="120.0" />
+                                                                        <Text layoutX="8.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Updated:" wrappingWidth="72.5439453125" AnchorPane.leftAnchor="10.0" />
+                                                                        <Text fx:id="updateText" layoutX="104.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="102.00000163912773" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="215.93310546875" />
+                                                                     </children></AnchorPane>
+                                                            </content>
+                                                          </Tab>
+                                                            <Tab text="Statistics">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Text layoutX="1.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Largest Average galamsey:" wrappingWidth="187.00830078125" AnchorPane.leftAnchor="1.0" />
+                                                                        <Text fx:id="largestAverage" layoutX="99.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.00000441074371" AnchorPane.leftAnchor="100.0" />
+                                                                        <Text layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Largest Galamsey Ever:" wrappingWidth="180.99999725818634" AnchorPane.leftAnchor="0.0" />
+                                                                        <Text fx:id="largestColour" layoutX="91.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="88.00000882148743" AnchorPane.leftAnchor="100.0" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </Tab>
+                                                        </tabs>
+                                                      </TabPane>
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <JFXListView layoutX="192.0" layoutY="-186.0" prefHeight="51.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

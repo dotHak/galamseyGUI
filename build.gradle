@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+group 'galamsey.monitoring '
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.jfoenix:jfoenix:9.0.8'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+}
+
+
+javafx {
+    modules = [ 'javafx.controls' , 'javafx.fxml']
+}
+
+mainClassName = 'monitoring.gui.Main'

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="487.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitoring.gui.controller.galamseyController">
+   <children>
+      <JFXTextField focusColor="#00a152" layoutX="65.0" layoutY="143.0" prefHeight="36.0" prefWidth="217.0" promptText="Latitude" unFocusColor="#212121" />
+       <fx:define>
+           <ToggleGroup fx:id="colourName" />
+       </fx:define>
+      <JFXRadioButton layoutX="228.0" layoutY="42.0" text="Brown" textFill="#00a152">
+         <toggleGroup>
+            <ToggleGroup fx:id="colourName" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton layoutX="139.0" layoutY="42.0" text="Yellow" textFill="#00a152" toggleGroup="$colourName" />
+      <JFXRadioButton layoutX="62.0" layoutY="42.0" text="Green" textFill="#00a152" toggleGroup="$colourName" />
+      <Text fill="#0dd09c" fontSmoothingType="LCD" layoutX="58.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Vegetation Colour" wrappingWidth="198.7294921875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+       <fx:define>
+           <ToggleGroup fx:id="colourValue" />
+       </fx:define>
+      <JFXRadioButton layoutX="139.0" layoutY="103.0" text="2" textFill="#00a152">
+         <toggleGroup>
+            <ToggleGroup fx:id="colourValue" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton layoutX="228.0" layoutY="103.0" text="3" textFill="#00a152" toggleGroup="$colourValue" />
+      <JFXRadioButton layoutX="63.0" layoutY="103.0" text="1" textFill="#00a152" toggleGroup="$colourValue" />
+
+      <JFXTextField focusColor="#00a152" layoutX="62.0" layoutY="208.0" prefHeight="36.0" prefWidth="217.0" promptText="Longitude" unFocusColor="#212121" />
+      <JFXTextField focusColor="#00a152" layoutX="65.0" layoutY="280.0" prefHeight="36.0" prefWidth="217.0" promptText="Latitude" text="Year" unFocusColor="#212121" />
+      <JFXTextField focusColor="#00a152" layoutX="62.0" layoutY="355.0" prefHeight="36.0" prefWidth="217.0" promptText="Observatory ID" unFocusColor="#212121" />
+      <Text fill="#0dd09c" fontSmoothingType="LCD" layoutX="58.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colour Value" wrappingWidth="198.7294921875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="58.0" layoutY="428.0" prefHeight="36.0" prefWidth="102.0" style="-fx-background-color: #00a152;" text="Add" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" cancelButton="true" layoutX="180.0" layoutY="428.0" prefHeight="36.0" prefWidth="102.0" style="-fx-background-color: #ff1744;" text="Cancel" textFill="WHITE" />
+   </children>
+</AnchorPane>

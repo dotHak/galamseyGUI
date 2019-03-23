@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="274.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitoring.gui.controller.obDeleteController">
+    <children>
+        <JFXButton fx:id="observCancel" buttonType="RAISED" layoutX="65.0" layoutY="197.0" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: red;" text="Cancel" textFill="WHITE" />
+        <JFXButton fx:id="observConfirm" buttonType="RAISED" layoutX="273.0" layoutY="197.0" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: green;" text="Confirm" textFill="WHITE" />
+        <Text layoutX="60.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to delete the observatory of ID" wrappingWidth="322.7294921875">
+            <font>
+                <Font name="System Bold Italic" size="23.0" />
+            </font>
+        </Text>
+        <Text fill="RED" layoutX="98.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Deletion">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="deleteObservId" fill="RED" layoutX="400.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.7294921875">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
