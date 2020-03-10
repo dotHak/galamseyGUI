@@ -5,5 +5,6 @@ A simple java project to manage the data of illigal mining(Galamsey) in Ghana
 
 ## Code Testing
 `./gradlew build`
+##
 `./gradlew run`
 
